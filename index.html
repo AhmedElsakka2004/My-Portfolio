@@ -1,407 +1,371 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- Browser Tab Title -->
-  <title>Ahmed El Sakka | AI & Software Engineer</title>
-  
-  <!-- Google Fonts: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'sans-serif'],
-          },
-          colors: {
-            dark: {
-              bg: '#090D16',
-              card: '#111827',
-              border: '#1F2937',
-              muted: '#9CA3AF'
-            },
-            accent: {
-              cyan: '#06B6D4',
-              indigo: '#6366F1',
-              violet: '#8B5CF6',
-              emerald: '#10B981'
-            }
-          }
-        }
-      }
-    }
-  </script>
-</head>
-<body class="bg-dark-bg text-slate-100 font-sans antialiased selection:bg-accent-indigo selection:text-white">
-
-  <!-- Header / Navigation -->
-  <header class="sticky top-0 z-50 bg-dark-bg/80 backdrop-blur-xl border-b border-dark-border">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-xl font-extrabold tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan to-accent-indigo">
-        AHMED<span class="text-white">.DEV</span>
-      </a>
-
-      <!-- Navigation Links -->
-      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-dark-muted">
-        <a href="#about" class="hover:text-accent-cyan transition-colors">About</a>
-        <a href="#skills" class="hover:text-accent-cyan transition-colors">Skills</a>
-        <a href="#education" class="hover:text-accent-cyan transition-colors">Education</a>
-        <a href="#projects" class="hover:text-accent-cyan transition-colors">Projects</a>
-        <a href="#contact" class="hover:text-accent-cyan transition-colors text-white">Contact</a>
-      </nav>
-
-      <!-- Action Buttons -->
-      <div class="hidden md:flex items-center space-x-3">
-        <!-- LinkedIn Link -->
-        <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="p-2 text-slate-300 hover:text-accent-cyan border border-dark-border hover:border-accent-cyan rounded-full transition-all" title="LinkedIn Profile">
-          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-          </svg>
-        </a>
-
-        <!-- View CV Button -->
-        <a href="https://drive.google.com/file/d/1P_-j6NsKEsaqyvkpy0NSomYYHdVMk0Se/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 text-xs font-bold text-accent-cyan border border-accent-cyan rounded-full hover:bg-accent-cyan/10 transition-all">
-          <span>📄</span>
-          <span>View CV</span>
-        </a>
-
-        <a href="https://wa.me/201212733294" target="_blank" class="inline-flex items-center px-4 py-2 text-xs font-bold text-slate-900 bg-gradient-to-r from-accent-cyan to-accent-indigo hover:opacity-90 rounded-xl transition-all shadow-lg shadow-accent-cyan/20 uppercase tracking-widest">
-          Get In Touch
-        </a>
-      </div>
-
-      <!-- Mobile Button -->
-      <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        </svg>
-      </button>
-    </div>
-
-    <!-- Mobile Dropdown -->
-    <div id="mobile-menu" class="hidden md:hidden bg-dark-card border-b border-dark-border px-6 py-6 space-y-4 font-semibold text-sm text-dark-muted">
-      <a href="#about" class="block hover:text-accent-cyan">About</a>
-      <a href="#skills" class="block hover:text-accent-cyan">Skills</a>
-      <a href="#education" class="block hover:text-accent-cyan">Education</a>
-      <a href="#projects" class="block hover:text-accent-cyan">Projects</a>
-      <a href="#contact" class="block hover:text-accent-cyan">Contact</a>
-      <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="block text-center py-2 text-xs font-bold text-slate-300 border border-dark-border rounded-xl">
-        LinkedIn Profile ↗
-      </a>
-      <a href="https://drive.google.com/file/d/1P_-j6NsKEsaqyvkpy0NSomYYHdVMk0Se/view?usp=drive_link" target="_blank" class="block text-center py-2.5 text-xs font-bold text-accent-cyan border border-accent-cyan rounded-full">
-        📄 View CV
-      </a>
-      <a href="https://wa.me/201212733294" target="_blank" class="block text-center py-3 text-xs font-bold text-slate-900 bg-accent-cyan rounded-xl">
-        Contact via WhatsApp
-      </a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="about" class="py-20 lg:py-28 relative overflow-hidden">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-indigo/10 rounded-full blur-[120px] -z-10"></div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed El Sakka | AI & ML Engineer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
-      <div class="md:col-span-6 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-dark-card border border-dark-border text-xs font-semibold text-accent-cyan">
-          <span class="w-2 h-2 rounded-full bg-accent-emerald animate-ping"></span>
-          <span>Open for AI & Engineering Roles</span>
-        </div>
-
-        <h1 class="text-4xl sm:text-6xl font-black tracking-tight leading-none">
-          Building <span class="bg-clip-text text-transparent bg-gradient-to-r from-accent-cyan via-accent-indigo to-accent-violet">Intelligent</span> Web & AI Systems.
-        </h1>
-
-        <p class="text-dark-muted text-base sm:text-lg leading-relaxed max-w-2xl">
-          Hi, I'm <strong class="text-white">Ahmed El Sakka</strong>. A Software Engineer specializing in Full-Stack Development and Computer Vision / Deep Learning integrations.
-        </p>
-
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <!-- View CV Button -->
-          <a href="https://drive.google.com/file/d/1P_-j6NsKEsaqyvkpy0NSomYYHdVMk0Se/view?usp=drive_link" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 text-sm font-bold text-accent-cyan border border-accent-cyan rounded-full hover:bg-accent-cyan/10 transition-all">
-            <span>📄</span>
-            <span>View CV</span>
-          </a>
-
-          <!-- LinkedIn Button -->
-          <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="px-6 py-3 text-xs font-bold text-slate-300 bg-dark-card hover:bg-slate-800 border border-dark-border rounded-xl transition-all flex items-center gap-2">
-            <svg class="w-4 h-4 fill-accent-cyan" viewBox="0 0 24 24">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-            <span>LinkedIn</span>
-          </a>
-
-          <a href="https://wa.me/201212733294" target="_blank" class="px-6 py-3 text-xs font-bold text-white bg-accent-emerald hover:bg-emerald-600 rounded-xl transition-all shadow-lg shadow-emerald-900/20 flex items-center gap-2 uppercase tracking-wider">
-            <span>WhatsApp Direct</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Right Column: Developer Profile Card -->
-      <div class="md:col-span-6 flex justify-center">
-        <div class="p-8 rounded-3xl bg-dark-card/60 border border-dark-border backdrop-blur-md shadow-2xl space-y-6 flex flex-col items-center text-center w-full max-w-[460px]">
-          <div class="flex items-center justify-between w-full">
-            <span class="text-xs font-mono text-accent-cyan">&lt;DeveloperProfile /&gt;</span>
-            <span class="w-3 h-3 rounded-full bg-accent-emerald"></span>
-          </div>
-
-          <!-- Profile Photo -->
-          <div class="flex flex-col items-center gap-4 w-full">
-            <div class="relative w-[400px] max-w-full h-[400px] rounded-3xl p-2 bg-gradient-to-tr from-accent-cyan via-accent-indigo to-accent-violet shrink-0 shadow-2xl shadow-accent-cyan/20">
-              <img src="profile.jpg" alt="Ahmed Mohamed El Sakka" class="w-full h-full object-cover rounded-2xl" />
-            </div>
-            <div class="space-y-1 mt-2">
-              <h3 class="text-2xl font-bold text-white">Ahmed Mohamed El Sakka</h3>
-              <p class="text-xs text-dark-muted">Faculty of Computer and Information</p>
-            </div>
-          </div>
-
-          <div class="space-y-3 pt-4 border-t border-dark-border w-full text-left">
-            <div class="flex justify-between text-xs">
-              <span class="text-dark-muted">Specialization</span>
-              <span class="font-semibold text-slate-200">AI & Web Engineering</span>
-            </div>
-            <div class="flex justify-between text-xs">
-              <span class="text-dark-muted">Phone / WhatsApp</span>
-              <span class="font-semibold text-slate-200">01212733294</span>
-            </div>
-            <div class="flex justify-between text-xs">
-              <span class="text-dark-muted">Email</span>
-              <span class="font-semibold text-slate-200 truncate max-w-[200px]" title="mo6547789890@gmail.com">mo6547789890@gmail.com</span>
-            </div>
-            <div class="flex justify-between text-xs">
-              <span class="text-dark-muted">LinkedIn</span>
-              <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="font-semibold text-accent-cyan hover:underline">ahmed-elsakka</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Matrix -->
-  <section id="skills" class="py-16 border-t border-dark-border bg-dark-card/30">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="mb-10">
-        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Capabilities</span>
-        <h2 class="text-3xl font-extrabold text-white mt-1">Technical Expertise</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
-          <div class="text-accent-cyan text-xl font-black">01</div>
-          <h3 class="text-base font-bold text-white">Computer Vision & AI</h3>
-          <p class="text-xs text-dark-muted leading-relaxed">
-            Developing CNN models, image processing pipelines, and generative AI API integrations.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
-          <div class="text-accent-indigo text-xl font-black">02</div>
-          <h3 class="text-base font-bold text-white">Full-Stack Web</h3>
-          <p class="text-xs text-dark-muted leading-relaxed">
-            Building responsive frontend platforms and scalable Node.js/Express backends connected to databases.
-          </p>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-dark-card border border-dark-border space-y-3">
-          <div class="text-accent-violet text-xl font-black">03</div>
-          <h3 class="text-base font-bold text-white">Software Architecture</h3>
-          <p class="text-xs text-dark-muted leading-relaxed">
-            Designing clean REST APIs, interactive Java desktop tools, and robust data pipeline workflows.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="py-20 border-t border-dark-border">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Academic Background</span>
-        <h2 class="text-3xl font-extrabold text-white mt-1">Education & Qualifications</h2>
-      </div>
-
-      <div class="space-y-6">
-        <!-- Education Card 1 -->
-        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-cyan/50 transition-all flex flex-col md:flex-row justify-between md:items-center gap-6">
-          <div class="space-y-2">
-            <span class="px-3 py-1 text-[10px] font-bold text-accent-cyan bg-accent-cyan/10 rounded-full uppercase">Bachelor Degree</span>
-            <h3 class="text-xl font-bold text-white">Bachelor of Science in Computer and Information</h3>
-            <p class="text-xs text-dark-muted">Arab Open University (In partnership with The Open University, UK)</p>
-          </div>
-          <div class="flex items-center gap-3 text-xs font-semibold text-slate-300 bg-dark-bg px-4 py-2.5 rounded-xl border border-dark-border self-start md:self-center">
-            <span>🎓 Status: Graduated</span>
-          </div>
-        </div>
-
-        <!-- Education Card 2 -->
-        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-indigo/50 transition-all flex flex-col md:flex-row justify-between md:items-center gap-6">
-          <div class="space-y-2">
-            <span class="px-3 py-1 text-[10px] font-bold text-accent-indigo bg-accent-indigo/10 rounded-full uppercase">Specialized Program</span>
-            <h3 class="text-xl font-bold text-white">Digital Egypt Pioneers Initiative (DEPI)</h3>
-            <p class="text-xs text-dark-muted">AI & Data Science – Machine Learning Track | Ministry of Communications & IT (MCIT)</p>
-          </div>
-          <div class="flex items-center gap-3 text-xs font-semibold text-slate-300 bg-dark-bg px-4 py-2.5 rounded-xl border border-dark-border self-start md:self-center">
-            <span>⚡ Practical Training</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 border-t border-dark-border bg-dark-card/30">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="mb-12">
-        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Work Portfolio</span>
-        <h2 class="text-3xl font-extrabold text-white mt-1">Featured Projects</h2>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { 
+                        sans: ['Poppins', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace']
+                    },
+                    colors: {
+                        dark: '#0f172a',
+                        primary: '#06b6d4', // Cyan
+                        secondary: '#8b5cf6' // Violet
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; overflow-x: hidden; }
+        .glass-card { background: rgba(30, 41, 59, 0.4); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .glass-nav { background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); }
+        .glow-text { text-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+        .blob { position: absolute; filter: blur(90px); z-index: -1; opacity: 0.3; border-radius: 50%; }
         
-        <!-- Project 1: Plant Detect Website -->
-        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-accent-cyan/50 transition-all group flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full uppercase">AI WEBSITE</span>
-              <span class="text-xs font-mono text-emerald-400">Individual Graduation Project (B+)</span>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #0891b2; }
+    </style>
+</head>
+<body class="antialiased selection:bg-primary selection:text-white relative">
+
+    <!-- Background Blobs for 3D Lighting Effect -->
+    <div class="blob bg-primary w-[500px] h-[500px] top-0 left-[-100px]"></div>
+    <div class="blob bg-secondary w-[400px] h-[400px] top-1/3 right-[-50px]"></div>
+    <div class="blob bg-blue-600 w-[600px] h-[600px] bottom-0 left-1/4"></div>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-2xl font-bold tracking-wide flex items-center gap-2">
+                <i class="fas fa-microchip text-primary"></i>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Ahmed El Sakka</span>
+            </a>
+            <nav class="hidden md:flex gap-8 font-medium text-gray-300 text-sm">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#experience" class="hover:text-primary transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
+                <a href="#certificates" class="hover:text-primary transition-colors">Certificates</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="Ahmed_El_Sakka_CV (10).pdf" download class="px-5 py-2 rounded-lg bg-white/5 border border-white/10 text-white text-sm font-semibold hover:bg-white/10 transition-colors flex items-center gap-2">
+                    <i class="fas fa-file-download text-primary"></i> CV
+                </a>
+                <a href="mailto:mo6547789890@gmail.com" class="px-5 py-2 rounded-lg bg-gradient-to-r from-primary to-blue-600 text-white text-sm font-semibold hover:scale-105 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                    Hire Me
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="min-h-screen flex items-center pt-20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right" class="space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-primary text-xs font-mono border-primary/20">
+                    <span class="relative flex h-2.5 w-2.5">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+                    </span>
+                    Open to Work
+                </div>
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+                    Hi, I'm <br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Ahmed El Sakka</span>
+                </h1>
+                
+                <!-- Typing Effect -->
+                <h2 class="text-2xl md:text-3xl font-medium text-gray-300 h-10">
+                    <span id="typing-text" class="text-white border-r-2 border-primary pr-1"></span>
+                </h2>
+                
+                <p class="text-gray-400 text-lg leading-relaxed max-w-lg">
+                    Results-driven Machine Learning Engineer specializing in Computer Vision, Deep Learning, and AI Model Deployment. Experienced in building end-to-end pipelines and integrating LMMs via Node.js/Express APIs.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="Ahmed_El_Sakka_CV (10).pdf" download class="px-6 py-3 rounded-full bg-gradient-to-r from-primary to-blue-600 text-white text-sm font-medium hover:scale-105 transition-transform shadow-[0_0_15px_rgba(6,182,212,0.4)] flex items-center gap-2">
+                        <i class="fas fa-file-pdf"></i> Download Resume
+                    </a>
+                    <a href="https://github.com/AhmedElsakka2004" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xl hover:bg-white hover:text-dark transition-all duration-300">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="w-12 h-12 rounded-full glass-card flex items-center justify-center text-xl hover:bg-blue-500 hover:text-white transition-all duration-300">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
             
-            <h3 class="text-xl font-bold text-white group-hover:text-accent-cyan transition-colors">Plant Detect Platform</h3>
-            
-            <p class="text-xs text-dark-muted leading-relaxed">
-              An intelligent AI-powered Website built to classify plant leaf diseases using Convolutional Neural Networks (CNNs). Integrated with Google Gemini API to generate instant, bilingual treatment reports.
-            </p>
-          </div>
-
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">CNN / Deep Learning</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Python</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Node.js</span>
-          </div>
-        </div>
-
-        <!-- Project 2: Elite Booking -->
-        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-accent-violet/50 transition-all group flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold text-accent-violet bg-accent-violet/10 px-3 py-1 rounded-full uppercase">Full-Stack Web</span>
-              <span class="text-xs font-mono text-slate-400">Web Project</span>
+            <div data-aos="zoom-in" data-aos-delay="200" class="relative hidden md:flex justify-center items-center">
+                <!-- Profile Picture -->
+                <div class="relative w-72 h-72 md:w-80 md:h-80 rounded-full p-2 glass-card z-10 shadow-[0_0_40px_rgba(6,182,212,0.2)] hover:scale-105 transition-transform duration-500">
+                    <img src="profile.jpg" alt="Ahmed El Sakka" class="w-full h-full object-cover rounded-full border-4 border-primary/20">
+                </div>
+                <!-- Abstract rotating rings -->
+                <div class="absolute w-[350px] h-[350px] md:w-[400px] md:h-[400px] border border-primary/30 border-dashed rounded-full animate-[spin_20s_linear_infinite] -z-0"></div>
+                <div class="absolute w-[380px] h-[380px] md:w-[430px] md:h-[430px] border border-secondary/20 border-dashed rounded-full animate-[spin_15s_linear_infinite_reverse] -z-0"></div>
             </div>
-
-            <h3 class="text-xl font-bold text-white group-hover:text-accent-violet transition-colors">Elite Booking Platform</h3>
-            
-            <p class="text-xs text-dark-muted leading-relaxed">
-              A responsive, user-centric web reservation platform featuring automated reservation workflows, dynamic scheduling, and client-side DOM validation logic.
-            </p>
-          </div>
-
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">JavaScript</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">HTML5/CSS3</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Tailwind CSS</span>
-          </div>
         </div>
+    </section>
 
-        <!-- Project 3: Interactive 2D Graphics Canvas Engine -->
-        <div class="p-8 rounded-3xl bg-dark-card border border-dark-border space-y-5 hover:border-emerald-500/50 transition-all group flex flex-col justify-between">
-          <div class="space-y-4">
-            <div class="flex justify-between items-center">
-              <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full uppercase">Desktop Systems</span>
-              <span class="text-xs font-mono text-slate-400">Java Graphics</span>
+    <!-- Experience & Education (Timeline) -->
+    <section id="experience" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-center mb-16">Experience & <span class="text-primary">Education</span></h2>
+            
+            <div class="relative border-l-2 border-gray-700 ml-3 md:ml-6 space-y-12 pl-8">
+                
+                <!-- Experience Item 1 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-primary rounded-full -left-[41px] top-1.5 ring-4 ring-dark group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                        <span class="text-xs font-mono text-primary mb-2 block">July 2026 - Present</span>
+                        <h3 class="text-xl font-bold mb-1">Microsoft Machine Learning Engineer</h3>
+                        <p class="text-gray-400 text-sm mb-4">Digital Egypt Pioneers Initiative (DEPI) & MCIT</p>
+                        <ul class="text-gray-300 text-sm leading-relaxed list-disc list-inside space-y-1">
+                            <li>Engineered and deployed scalable ML & CV pipelines on Azure AI.</li>
+                            <li>Implemented MLOps best practices using MLflow and Hugging Face.</li>
+                            <li>Optimized inference efficiency and classification accuracy using Transfer Learning.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2 -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-secondary rounded-full -left-[41px] top-1.5 ring-4 ring-dark group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform">
+                        <span class="text-xs font-mono text-secondary mb-2 block">July 2026</span>
+                        <h3 class="text-xl font-bold mb-1">AI & Technical Skills Trainee</h3>
+                        <p class="text-gray-400 text-sm mb-4">Arab Open University & Cisco Training Center</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Completed intensive practical training on modern AI concepts, deep neural network architectures, and practical Machine Learning workflows.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Education Item -->
+                <div data-aos="fade-up" class="relative group">
+                    <div class="absolute w-4 h-4 bg-gray-400 rounded-full -left-[41px] top-1.5 ring-4 ring-dark group-hover:scale-125 transition-transform"></div>
+                    <div class="glass-card p-6 rounded-2xl hover:-translate-y-1 transition-transform border-t-2 border-gray-500">
+                        <span class="text-xs font-mono text-gray-400 mb-2 block">Graduated: September 2026</span>
+                        <h3 class="text-xl font-bold mb-1">Bachelor of Computer Science</h3>
+                        <p class="text-gray-400 text-sm mb-4">Faculty of Computer and Information, Arab Open University | Graduation Project Grade: B+</p>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Focused on core computer science fundamentals and advanced algorithms. Developed an AI-driven web platform for plant disease diagnosis as a capstone project.
+                        </p>
+                    </div>
+                </div>
             </div>
-
-            <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition-colors">2D Interactive Canvas Engine</h3>
-            
-            <p class="text-xs text-dark-muted leading-relaxed">
-              An interactive desktop canvas built with Java Graphics2D, Swing, and AWT to simulate frame-by-frame 2D vector animations, text outlining, and complex geometric transformations.
-            </p>
-          </div>
-
-          <div class="flex flex-wrap gap-2 pt-4 border-t border-dark-border">
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Java</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Graphics2D</span>
-            <span class="text-[10px] font-semibold bg-dark-bg text-slate-300 px-2.5 py-1 rounded-md border border-dark-border">Swing / AWT</span>
-          </div>
         </div>
+    </section>
 
-      </div>
-    </div>
-  </section>
+    <!-- Projects Portfolio -->
+    <section id="projects" class="py-24 bg-gray-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-center mb-16">Featured <span class="text-secondary">Projects</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-[#064e3b] to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-leaf text-5xl text-green-500/50 group-hover:scale-125 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-bold">Plant Detect AI</h3>
+                            <span class="text-[10px] bg-green-500/10 border border-green-500/20 px-2 py-1 rounded text-green-400 font-mono">Graduation Project</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">
+                            End-to-end CV image classification pipeline for diagnosing plant leaf diseases using fine-tuned VGG16 and ResNet50. Integrated Google Gemini API for automated bilingual reports.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">Python</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">VGG16</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">Node.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">Gemini API</span>
+                        </div>
+                    </div>
+                </div>
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 border-t border-dark-border">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="mb-12 text-center max-w-2xl mx-auto space-y-3">
-        <span class="text-xs font-bold text-accent-cyan uppercase tracking-widest">Get In Touch</span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Let's Work Together</h2>
-        <p class="text-xs sm:text-sm text-dark-muted">
-          Feel free to reach out for project inquiries, collaboration opportunities, or technical roles.
-        </p>
-      </div>
+                <!-- Project 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-[#1e3a8a] to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-shopping-cart text-5xl text-blue-500/50 group-hover:scale-125 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-bold">VIBE Streetwear</h3>
+                            <span class="text-[10px] bg-blue-500/10 border border-blue-500/20 px-2 py-1 rounded text-blue-400 font-mono">E-Commerce</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">
+                            Dynamic Arabic streetwear e-commerce platform featuring interactive product filtering, real-time cart calculations, and automated checkout invoice generation.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">React.js</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">Tailwind CSS</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">Vite</span>
+                        </div>
+                    </div>
+                </div>
 
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-        <!-- Phone / WhatsApp Box -->
-        <a href="https://wa.me/201212733294" target="_blank" class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-emerald transition-all flex items-center gap-5 group">
-          <div class="w-14 h-14 rounded-2xl bg-accent-emerald/10 text-accent-emerald flex items-center justify-center shrink-0 group-hover:bg-accent-emerald group-hover:text-slate-900 transition-all">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-            </svg>
-          </div>
-          <div class="space-y-1">
-            <span class="text-xs font-bold text-dark-muted uppercase tracking-wider">Phone & WhatsApp</span>
-            <h3 class="text-lg font-bold text-white group-hover:text-accent-emerald transition-colors">01212733294</h3>
-            <p class="text-xs text-emerald-400">Click to chat on WhatsApp →</p>
-          </div>
-        </a>
+                <!-- Project 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="glass-card rounded-2xl overflow-hidden flex flex-col group">
+                    <div class="h-48 bg-gradient-to-br from-[#4c1d95] to-gray-900 flex items-center justify-center relative overflow-hidden">
+                        <i class="fas fa-hotel text-5xl text-purple-500/50 group-hover:scale-125 transition-transform duration-500"></i>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-lg font-bold">Elite Booking</h3>
+                            <span class="text-[10px] bg-purple-500/10 border border-purple-500/20 px-2 py-1 rounded text-purple-400 font-mono">Web System</span>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4 flex-1">
+                            Dynamic hotel booking web system featuring real-time room pricing calculations and clean UI interaction with client-side DOM input validation mechanisms.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mt-auto">
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">JS (ES6+)</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">HTML5/CSS3</span>
+                            <span class="text-xs px-2 py-1 bg-gray-800 rounded text-gray-300">DOM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <!-- Email Box -->
-        <a href="mailto:mo6547789890@gmail.com" class="p-8 rounded-3xl bg-dark-card border border-dark-border hover:border-accent-cyan transition-all flex items-center gap-5 group">
-          <div class="w-14 h-14 rounded-2xl bg-accent-cyan/10 text-accent-cyan flex items-center justify-center shrink-0 group-hover:bg-accent-cyan group-hover:text-slate-900 transition-all">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div class="space-y-1 overflow-hidden">
-            <span class="text-xs font-bold text-dark-muted uppercase tracking-wider">Direct Email</span>
-            <h3 class="text-sm sm:text-base font-bold text-white group-hover:text-accent-cyan transition-colors truncate" title="mo6547789890@gmail.com">mo6547789890@gmail.com</h3>
-            <p class="text-xs text-accent-cyan">Click to send email →</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold mb-16">Technical <span class="text-primary">Arsenal</span></h2>
+            
+            <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                <!-- Tech Tags -->
+                <span class="px-5 py-3 glass-card rounded-xl border-t border-primary/50 text-sm font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Deep Learning & CNNs</span>
+                <span class="px-5 py-3 glass-card rounded-xl border-t border-primary/50 text-sm font-medium hover:bg-primary hover:text-white transition-colors cursor-default">Computer Vision & OpenCV</span>
+                <span class="px-5 py-3 glass-card rounded-xl border-t border-secondary/50 text-sm font-medium hover:bg-secondary hover:text-white transition-colors cursor-default">Node.js & Express</span>
+                <span class="px-5 py-3 glass-card rounded-xl border-t border-secondary/50 text-sm font-medium hover:bg-secondary hover:text-white transition-colors cursor-default">Google Gemini API</span>
+                <span class="px-5 py-3 glass-card rounded-xl text-sm font-medium hover:bg-white hover:text-dark transition-colors cursor-default">React.js & Tailwind CSS</span>
+                <span class="px-5 py-3 glass-card rounded-xl text-sm font-medium hover:bg-white hover:text-dark transition-colors cursor-default">Python & SQLite</span>
+                <span class="px-5 py-3 glass-card rounded-xl text-sm font-medium hover:bg-white hover:text-dark transition-colors cursor-default">Transfer Learning (VGG16, ResNet50)</span>
+                <span class="px-5 py-3 glass-card rounded-xl text-sm font-medium hover:bg-white hover:text-dark transition-colors cursor-default">Ant Colony Optimization (ACO)</span>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-12 border-t border-dark-border text-center text-xs text-dark-muted space-y-2">
-    <p>© 2026 Ahmed El Sakka. All rights reserved.</p>
-    <div class="flex justify-center space-x-4 pt-1">
-      <a href="https://linkedin.com/in/ahmed-elsakka-15847a292" target="_blank" class="text-accent-cyan hover:underline">LinkedIn</a>
-      <span>•</span>
-      <span>Phone: 01212733294</span>
-      <span>•</span>
-      <span>Email: mo6547789890@gmail.com</span>
-    </div>
-  </footer>
+    <!-- Certificates & Extras -->
+    <section id="certificates" class="py-24 bg-gray-900/30">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 data-aos="fade-up" class="text-3xl md:text-4xl font-bold text-center mb-12">Certifications & <span class="text-secondary">Activities</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div data-aos="fade-up" class="glass-card p-5 rounded-xl flex items-start gap-4">
+                    <i class="fas fa-certificate text-3xl text-yellow-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-white">Machine Learning Engineer Track</h4>
+                        <p class="text-xs text-gray-400 mt-1">Digital Egypt Pioneers Initiative (DEPI) & MCIT | 2026</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="glass-card p-5 rounded-xl flex items-start gap-4">
+                    <i class="fas fa-certificate text-3xl text-blue-400 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-white">Introduction to Modern AI</h4>
+                        <p class="text-xs text-gray-400 mt-1">Cisco & Arab Open University | July 2026</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="glass-card p-5 rounded-xl flex items-start gap-4">
+                    <i class="fas fa-certificate text-3xl text-green-400 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-white">Python Programming Basics</h4>
+                        <p class="text-xs text-gray-400 mt-1">Information Technology Institute (ITI) / Mahara-Tech | 2025</p>
+                    </div>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="glass-card p-5 rounded-xl flex items-start gap-4 border border-secondary/30">
+                    <i class="fas fa-microphone-alt text-3xl text-secondary mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-white">Graduation Exhibition Presenter</h4>
+                        <p class="text-xs text-gray-400 mt-1">Presented 'Plant Detect' AI platform showcasing real-time model inference. | June 2026</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-16 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-3xl font-bold mb-8">Let's Build the Future Together</h2>
+            <div class="flex flex-wrap justify-center gap-6 mb-10">
+                <a href="mailto:mo6547789890@gmail.com" class="glass-card px-6 py-3 rounded-full hover:border-primary transition-colors text-sm">
+                    <i class="fas fa-envelope text-primary mr-2"></i> mo6547789890@gmail.com
+                </a>
+                <a href="tel:+201212733294" class="glass-card px-6 py-3 rounded-full hover:border-primary transition-colors text-sm">
+                    <i class="fas fa-phone text-primary mr-2"></i> +20 121 273 3294
+                </a>
+                <span class="glass-card px-6 py-3 rounded-full text-sm">
+                    <i class="fas fa-location-dot text-primary mr-2"></i> Cairo, Egypt
+                </span>
+            </div>
+            <p class="text-gray-500 text-xs">© 2026 Ahmed Mohamed El Sakka. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-  </script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Scroll Animations
+        AOS.init({
+            duration: 800,
+            once: true,
+            offset: 50,
+        });
+
+        // Typing Effect Logic
+        const words = ["Machine Learning Engineer.", "Computer Vision Specialist.", "Backend API Developer."];
+        let i = 0, j = 0, isDeleting = false;
+        
+        function type() {
+            const textElement = document.getElementById('typing-text');
+            const currentWord = words[i];
+            
+            if (isDeleting) {
+                textElement.innerText = currentWord.substring(0, j - 1);
+                j--;
+            } else {
+                textElement.innerText = currentWord.substring(0, j + 1);
+                j++;
+            }
+            
+            let speed = isDeleting ? 40 : 80;
+            
+            if (!isDeleting && j === currentWord.length) {
+                speed = 2500; // Pause at end of word
+                isDeleting = true;
+            } else if (isDeleting && j === 0) {
+                isDeleting = false;
+                i = (i + 1) % words.length;
+                speed = 500; // Pause before typing next word
+            }
+            
+            setTimeout(type, speed);
+        }
+        
+        document.addEventListener('DOMContentLoaded', type);
+    </script>
 </body>
 </html>
